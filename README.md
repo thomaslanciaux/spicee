@@ -14,4 +14,6 @@ The following technologies are used:
 
 ## Installation of dev env
 
+```
 $ npm install
+```
