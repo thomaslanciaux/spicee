@@ -1,0 +1,26 @@
+{
+  "name": "spicee",
+  "version": "1.0.0",
+  "description": "Spicee front-end code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomaslanciaux/spicee.git"
+  },
+  "author": "T. Lanciaux, N. Escoffier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaslanciaux/spicee/issues"
+  },
+  "homepage": "https://github.com/thomaslanciaux/spicee",
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "gulp": "^3.8.11",
+    "jade": "^1.9.2",
+    "nib": "^1.1.0",
+    "stylus": "^0.50.0"
+  }
+}
