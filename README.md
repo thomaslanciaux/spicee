@@ -11,7 +11,8 @@ The following technologies are used:
 ## Requirements to build the code
 
 - [Node.js](http://nodejs.org)
-- [Gulp](http://gulpjs.com/) (Streaming build system) installed globaly `npm install -g gulp'
+- [Gulp](http://gulpjs.com/) (Streaming build system) installed globaly `npm install -g gulp`
+
 
 ## Installation of dev env
 
