@@ -5,7 +5,7 @@ var stylus = require('gulp-stylus');
 var jade = require('gulp-jade');
 
 function cssBundle(compress) {
-  return gulp.src('./src/css/index.styl')
+  return gulp.src('./src/style/index.styl')
     .pipe(stylus({
       use: nib(),
       compress: compress
@@ -29,7 +29,7 @@ gulp.task('watch-html', function() {
 });
 
 gulp.task('watch-css', function() {
-  gulp.watch('./src/css/*.styl', ['css']);
+  gulp.watch('./src/style/*.styl', ['css']);
 });
 
 gulp.task('watch', ['watch-html', 'watch-css']);

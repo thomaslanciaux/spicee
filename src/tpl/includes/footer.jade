@@ -1,0 +1,12 @@
+- var navItems = [ 'About us', 'Legal terms', 'Contact us', 'Advertising', 'Help']
+
+#footer
+  .viewport
+    .logo Spicee
+    nav
+      ul
+        each item in navItems
+          li
+            a(href='#')= item
+    span.copyright
+      | Spicee &copy; Recognition and Prestige for the Media

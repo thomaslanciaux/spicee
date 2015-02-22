@@ -1,0 +1,11 @@
+-var navItems = [ 'story', 'investigation', 'lifestyle', 'my spicee' ];
+
+#header
+  .viewport
+    h1.logo Spicee
+    nav
+      ul
+        each item in navItems
+          li
+            a(href='#',
+              class=item.replace(' ', '-'))= item

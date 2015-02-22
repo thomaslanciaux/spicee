@@ -11,5 +11,8 @@ html(lang='fr')
       block title
         | Welcome
   body
-    #main-container
-      block content
+    include ../includes/header
+    #content
+      .viewport
+        block content
+    include ../includes/footer
