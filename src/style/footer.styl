@@ -6,7 +6,10 @@
   color _grey
 
   .logo
-    font-size 0
+    float left
+    width 46px
+    height auto
+    fill _pink
 
   nav
     float left
@@ -35,3 +38,23 @@
 
   .copyright
     float right
+
+
+@media media-mobile
+
+  #footer
+    text-align center
+
+    .logo
+    nav
+    .copyright
+      float none
+      margin 0 auto
+
+    .logo
+      display none
+
+    nav li
+      display inline-block
+      float none
+      white-space nowrap

@@ -8,10 +8,17 @@
 
   .logo
     margin 0
+    width 155px
+    height auto
     padding-right 60px
-    font-size 40px
+    font-size 0
     line-height 1
-    color _pink
+    fill _pink
+    transition fill .3s ease
+    cursor pointer
+    &:hover
+    &:focus
+      fill _white
 
   nav
     text-transform uppercase
@@ -62,3 +69,22 @@
     .lifestyle
       &:hover, &:focus
         border-color _green
+
+
+@media media-mobile
+
+  #header
+    overflow hidden
+    box-sizing border-box
+    display table-cell
+    vertical-align middle
+    padding 10px 0
+    width 100%
+    height 50px
+
+    .logo
+      width 100px
+      height auto
+
+    nav
+      display none

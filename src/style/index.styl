@@ -1,25 +1,19 @@
 @import 'nib'
-
 @import 'colors'
 @import 'fonts'
 @import 'reset'
+
+// Media queries
+media-mobile     = 'only screen and (max-width: 599px)'
+media-touch      = 'only screen and (max-width: 1024px)'
+media-tablet     = 'only screen and (min-width: 600px) and (max-width: 1024px)'
+media-desktop    = 'only screen and (min-width: 1025px)'
+media-wide       = 'only screen and (min-width: 1240px)'
+media-not-mobile = 'only screen and (min-width: 600px)'
+
 @import 'header'
 @import 'footer'
-
-body
-  background _body
-  color _white
-
-#content
-  border-top 1px solid #212121
-  border-bottom 1px solid #212121
-  background _content
-
-.viewport
-  overflow hidden
-  margin 0 auto
-  padding 0 25px
-  max-width 980px
+@import 'layout'
 
 .heading
   position relative
