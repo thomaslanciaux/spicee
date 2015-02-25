@@ -6,9 +6,8 @@ block title
 block content
   .example(style='text-align:center;padding:25px 0')
     .heading
-      span(style='display:block;margin:0 auto 25px;width:80px;'+
-                 'height:70px;fill:white')
-        include ../svg/logo-plain.svg
+      p
+        span.icon-spicee-logo(style='font-size:60px')
       strong TEMPORE QUO PRIMIS AUSPICIIS
       h1(style='text-align:center;margin:0') In mundanum fulgorem
     p Lorem ipsum dolor sit amet…
@@ -22,8 +21,8 @@ block content
       h1 ICONS
     p
       span.share
-        each icon in ['facebook', 'twitter', 'gplus', 'mail']
+        each icon in ['facebook', 'twitter', 'google-plus', 'mail']
           a(class='icon-' + icon, href='#') 
-      each icon in ['left', 'right']
-        a(class='icon-' + icon + '-open-big', href='#',
-          style='font-size:30px') 
+    p(style='font-size:40px')
+      each icon in ['chair', 'spice', 'spice-empty', 'spicee-logo', 'icon-chevron-left', 'icon-chevron-right']
+        span(class='icon-' + icon) 
