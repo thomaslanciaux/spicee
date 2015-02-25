@@ -18,3 +18,16 @@ The following technologies are used:
 ```
 $ npm install
 ```
+
+## Font icons
+
+The font icons are used for most of the UX graphic. They are generated via [Icomoon App](http://icomoon.io/app/), which is an online tool to generate your own font-icon set, allowing to add SVG into fonts. 
+
+### Adding icon to the font icons
+
+- The current setting to load in Icomoon App is `./icomoon-selection.json` to get the current set loaded
+- Add any icon on the proposed libraries or import a .svg file into the Icomoon App
+- Download the new set
+- In the previously downloaded directory, copy `./style.css` into spicee project in `./src/style/icons.styl`
+- In the previously downloaded directory, copy all fonts from `./fonts/*` into spicee project in `./dist/css/fonts/`
+- Run `$ gulp`
