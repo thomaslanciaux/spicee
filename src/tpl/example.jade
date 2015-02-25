@@ -16,7 +16,7 @@ block content
     a(href='#') Story 
     | Page name
 
-  article
+  article.b-space
     header
       h1 FONT ICONS
     div
@@ -26,3 +26,16 @@ block content
     div(style='font-size:40px; margin-bottom:25px')
       each icon in ['chair', 'spice', 'spice-empty', 'spicee-logo', 'chevron-left', 'chevron-right']
         span(class='icon-' + icon) 
+
+  article.b-space
+    header
+      h1 PREHOME PICTOS
+      .pictos
+        span
+          include ../svg/quotes.svg
+        span
+          include ../svg/magnifying.svg
+        span
+          include ../svg/glasses.svg
+        span
+          include ../svg/chair.svg
