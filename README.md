@@ -23,7 +23,7 @@ $ npm install
 
 The font icons are used for most of the UX graphic. They are generated via [Icomoon App](http://icomoon.io/app/), which is an online tool to generate your own font-icon set, allowing to add SVG into fonts. 
 
-### Adding icon to the font icons
+Follow these steps to add icon(s) to the font:
 
 - The current setting to load in Icomoon App is `./icomoon-selection.json` to get the current set loaded
 - Add any icon on the proposed libraries or import a .svg file into the Icomoon App
