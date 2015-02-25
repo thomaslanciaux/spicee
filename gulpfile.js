@@ -22,10 +22,12 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', _.partial(cssBundle, false));
+
 gulp.task('cssmin', _.partial(cssBundle, true));
 
 gulp.task('watch-html', function() {
   gulp.watch('./src/tpl/*.jade', ['html']);
+  gulp.watch('./src/tpl/**/*.jade', ['html']);
 });
 
 gulp.task('watch-css', function() {
@@ -33,4 +35,5 @@ gulp.task('watch-css', function() {
 });
 
 gulp.task('watch', ['watch-html', 'watch-css']);
+
 gulp.task('default', ['html', 'cssmin']);

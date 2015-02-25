@@ -6,6 +6,24 @@ block title
 block content
   .example(style='text-align:center;padding:25px 0')
     .heading
+      span(style='display:block;margin:0 auto 25px;width:80px;'+
+                 'height:70px;fill:white')
+        include ../svg/logo-plain.svg
       strong TEMPORE QUO PRIMIS AUSPICIIS
       h1(style='text-align:center;margin:0') In mundanum fulgorem
     p Lorem ipsum dolor sit amet…
+
+  .breadcrumb
+    a(href='#') Story 
+    | Page name
+
+  article
+    header
+      h1 ICONS
+    p
+      span.share
+        each icon in ['facebook', 'twitter', 'gplus', 'mail']
+          a(class='icon-' + icon, href='#') 
+      each icon in ['left', 'right']
+        a(class='icon-' + icon + '-open-big', href='#',
+          style='font-size:30px') 

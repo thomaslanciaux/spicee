@@ -13,7 +13,6 @@ The following technologies are used:
 - [Node.js](http://nodejs.org)
 - [Gulp](http://gulpjs.com/) (Streaming build system) installed globaly `npm install -g gulp`
 
-
 ## Installation of dev env
 
 ```
