@@ -1,0 +1,30 @@
+extends ./layouts/main
+include ./includes/mixins
+
+block title
+  | Investigation
+
+block content
+  .i-space
+    .viewport
+      .row.b-space
+        .span-4
+          +box('investigation', 'In mudanum fulgorem', 'Antoine Robin', 
+              '93min Societe Cultures 12 437 vues', 3)
+        .span-4
+          +box('investigation', 'Gags de gangster', 'Faycal Elmakoudi', 
+              '93min Societe Cultures 12 437 vues', 5)
+        .span-4
+          +box('investigation', 'Le vestiaire d\'Audrey', 'Jean-Bernard Schmidt', 
+              '93min Societe Cultures 12 437 vues', 4)
+      .row.b-space
+        .span-4
+          +box('investigation', 'In mudanum fulgorem', 'Antoine Robin', 
+              '93min Societe Cultures 12 437 vues', 3)
+        .span-4
+          +box('investigation', 'Gags de gangster', 'Faycal Elmakoudi', 
+              '93min Societe Cultures 12 437 vues', 5)
+        .span-4
+          +box('investigation', 'Le vestiaire d\'Audrey', 'Jean-Bernard Schmidt', 
+              '93min Societe Cultures 12 437 vues', 4)
+      +pagination(4, 'investigation')

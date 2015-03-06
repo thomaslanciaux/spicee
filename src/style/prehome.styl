@@ -1,22 +1,155 @@
-.pictos
+_borders = 2px dotted #2d2d2d
+
+.prehome-choice
   font-size 0
-  span
+
+  .viewport
+    position relative
+    &:before
+      position absolute
+      top 50%
+      left 50%
+      z-index 1
+      width 50px
+      margin -17px 0 0 -25px
+      text-align center
+      font-size 20px
+      line-height 30px
+      content 'ou'
+      color _grey
+      background _content
+    &:after
+      position absolute
+      top 0
+      bottom 0
+      left 50%
+      z-index 0
+      margin-left -1px
+      content ''
+      border-left _borders
+
+  .choice
     display inline-block
     vertical-align middle
     box-sizing border-box
-    padding 50px
+    padding-left 25px
+    width 50%
+    font-size 1rem
+    &:first-child
+      padding-left 0
+      padding-right 25px
+
+.pictos
+  font-size 0
+  text-align center
+
+  .item
+    display inline-block
+    vertical-align middle
+    box-sizing border-box
+    padding 0 20px
     width 25%
     text-align center
     font-size 16px
-    svg
-      margin 0 auto
-      max-width 100px
-      max-height 60px
+    color _grey
+    border-left _borders
     &:first-child
-      fill _pink
-    &:nth-child(2)
-      fill _yellow
-    &:nth-child(3)
-      fill _green
-    &:nth-child(4)
-      fill _blue
+      border 0
+
+  .title
+    font-size 30px
+    margin 0 0 _gutter
+
+  .icon
+    display block
+    margin 0 auto _gutter
+    width 100px
+    height 60px
+    background-repeat no-repeat
+    background-position center center
+    background-size contain
+
+  .story 
+    .title
+      color _pink
+    .icon
+      background-image url(i/quotes.svg)
+
+  .investigation 
+    .title
+      color _yellow
+    .icon
+      background-image url(i/magnifying.svg)
+
+  .lifestyle
+    .title
+      color _green
+    .icon
+      background-image url(i/glasses.svg)
+
+  .my-spicee 
+    .title
+      color _blue
+    .icon
+      background-image url(i/chair.svg)
+
+
+@media media-touch
+
+  .pictos
+    .item
+      padding-top _gutter
+      padding-bottom _gutter
+
+
+@media media-tablet
+
+  .pictos
+    overflow hidden
+    .item
+      width 50%
+      margin-top -1px
+      border 0
+
+
+@media only screen and (max-width: 760px)
+
+  .prehome-choice
+    text-align center
+
+    .viewport
+      &:before
+      &:after
+        display none
+
+    .choice
+      padding 0
+      width 100%
+      &:first-child
+        padding 0
+        &:after
+          display block
+          margin 25px auto
+          content 'ou'
+          color _grey
+
+      .btn
+        display inline-block
+        width 50%
+        max-width 80%
+
+
+@media media-mobile
+
+  .pictos
+    .item
+      display block
+      width auto
+      border-left 0
+      border-top _borders
+
+  .prehome-choice
+    .choice .btn
+      display block
+      width auto
+      max-width 100%

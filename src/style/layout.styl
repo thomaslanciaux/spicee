@@ -1,19 +1,28 @@
-gutter = 25px
-
-body
-  background _body
-  color _white
+_gutter = 25px
 
 #content
   border-top 1px solid #212121
   border-bottom 1px solid #212121
-  background _content
 
 .viewport
   overflow hidden
   margin 0 auto
-  padding 0 25px
+  padding 0 _gutter
   max-width 980px
 
+.no-sp
+  margin 0
+  padding 0
+
+.t-space
+  margin-bottom _gutter
+
 .b-space
-  margin-bottom 25px
+  margin-bottom _gutter
+
+.i-space
+  padding-top 50px
+  padding-bottom 50px
+
+.t-border
+  border-top 1px solid _darkgrey

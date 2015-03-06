@@ -2,13 +2,13 @@
 
 #header
   .viewport
-    a.logo(href='#')
+    a.logo(href='./home.html')
       include ../../svg/logo-fulltext.svg
     nav
       ul
         each item in navItems
           li
-            a(href='#',
+            a(href='./category.html',
               class=item.replace(' ', '-'))= item
         li.search
           a(href='#')

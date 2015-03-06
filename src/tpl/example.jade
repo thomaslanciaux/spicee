@@ -1,41 +1,22 @@
-extends ./layouts/main.jade
+extends ./layouts/main
+include ./includes/mixins
 
 block title
   | Example
 
 block content
-  .example(style='text-align:center;padding:25px 0')
-    .heading
-      p
-        span.icon-spicee-logo(style='font-size:60px')
-      strong TEMPORE QUO PRIMIS AUSPICIIS
-      h1(style='text-align:center;margin:0') In mundanum fulgorem
-    p Lorem ipsum dolor sit amet…
+  .viewport.i-space
+    .breadcrumb
+      a(href='#') Story 
+      | Page name
 
-  .breadcrumb
-    a(href='#') Story 
-    | Page name
-
-  article.b-space
-    header
-      h1 FONT ICONS
-    div
-      span.share
-        each icon in ['facebook', 'twitter', 'google-plus', 'mail']
-          a(class='icon-' + icon, href='#') 
-    div(style='font-size:40px; margin-bottom:25px')
-      each icon in ['chair', 'spice', 'spice-empty', 'spicee-logo', 'chevron-left', 'chevron-right']
-        span(class='icon-' + icon) 
-
-  article.b-space
-    header
-      h1 PREHOME PICTOS
-      .pictos
-        span
-          include ../svg/quotes.svg
-        span
-          include ../svg/magnifying.svg
-        span
-          include ../svg/glasses.svg
-        span
-          include ../svg/chair.svg
+    article.b-space
+      header
+        h1 FONT ICONS
+      div
+        span.share
+          each icon in ['facebook', 'twitter', 'google-plus', 'mail']
+            a(class='icon-' + icon, href='#') 
+      div(style='font-size:40px; margin-bottom:25px')
+        each icon in ['chair', 'spice', 'spice-empty', 'spicee-logo', 'chevron-left', 'chevron-right']
+          span(class='icon-' + icon) 

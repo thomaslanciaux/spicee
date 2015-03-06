@@ -1,5 +1,6 @@
 #header
   font-size 0
+
   .logo
   nav
     display inline-block
@@ -77,6 +78,11 @@
       border 0
       margin 0
 
+  &.prehome
+    .logo
+      margin _gutter
+      padding 0
+
 
 @media media-mobile
 
@@ -95,3 +101,8 @@
 
     nav
       display none
+
+@media media-desktop
+  #header
+    nav a
+      font-size 20px

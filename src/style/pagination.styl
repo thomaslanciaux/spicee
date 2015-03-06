@@ -1,0 +1,50 @@
+.pagination
+  position relative
+  padding 0 30px
+  text-align center
+  font-size 20px
+
+  [class^="icon-chevron"], [class*=" icon-chevron"]
+    position absolute
+    font-size 30px
+    color _white
+
+  .icon-chevron-left
+    left 0
+
+  .icon-chevron-right
+    right 0
+
+  .pages
+    line-height 30px
+
+    .active, a
+      display inline-block
+      vertical-align middle
+      padding 0 5px
+      margin 0 5px
+
+    .active
+      font-size 24px
+      color _white
+
+    a
+      color _grey
+
+  &.story
+    [class^="icon-chevron"], [class*=" icon-chevron"]
+    .active
+      color _pink
+
+  &.investigation
+    [class^="icon-chevron"], [class*=" icon-chevron"]
+    .active
+      color _yellow
+
+  &.lifestyle
+    [class^="icon-chevron"], [class*=" icon-chevron"]
+    .active
+      color _green
+
+  .disabled
+    color _grey !important

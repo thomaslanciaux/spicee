@@ -1,0 +1,41 @@
+extends ./layouts/main
+include ./includes/mixins
+
+block title
+  | Home
+
+block content
+  .i-space.logo-pattern
+    .viewport
+      .row
+        .span-4
+          +box('story', 'In mudanum fulgorem', 'Antoine Robin', 
+              '93min Societe Cultures 12 437 vues', 3)
+        .span-4
+          +box('lifestyle', 'Gags de gangster', 'Faycal Elmakoudi', 
+              '93min Societe Cultures 12 437 vues', 5)
+        .span-4
+          +box('investigation', 'Le vestiaire d\'Audrey', 'Jean-Bernard Schmidt', 
+              '93min Societe Cultures 12 437 vues', 4)
+
+  .i-space.t-border
+    .viewport
+      .row
+        .span-3
+          +boxsmall('lifestyle', 'quod cum ita sit paucae', 4)
+        .span-3
+          +boxsmall('story', 'ideoque fertur neminem aliquando', 5)
+        .span-3
+          +boxsmall('investigation', 'homines enim eruditos', 5)
+        .span-3
+          +boxsmall('story', 'accedente quod et nomencis', 3)
+
+  .i-space.logo-pattern.t-border
+    .viewport
+      .row
+        .span-8
+          +box('investigation', 'Disc Jokey', 'Bruno Jesus', 
+              '93min Societe Cultures 12 437 vues', 5)
+        .span-4
+          +box('lifestyle', 'Eminuit autem inter', 'David Fincher', 
+              '93min Societe Cultures 12 437 vues', 2)
