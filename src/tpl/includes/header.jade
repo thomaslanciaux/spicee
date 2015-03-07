@@ -2,9 +2,14 @@
 
 #header
   .viewport
+
     a.logo(href='./home.html')
       include ../../svg/logo-fulltext.svg
-    nav
+
+    a#nav-toggle(href='#navigation', title='Ouvrir la navigation')
+      i.icon-menu
+
+    nav#navigation
       ul
         each item in navItems
           li
