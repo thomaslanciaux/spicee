@@ -11,6 +11,8 @@ html(lang='fr')
       block title
         | Welcome
   body
+    script.
+      document.body.className += ' js';
     include ../includes/header
     #content
       block content

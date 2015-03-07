@@ -1,6 +1,6 @@
 mixin box(type, title, author, contentinfo, score)
-  a.box(class=type.replace(' ', '-'), href='#', 
-        style='background-image:url(http://img.ffffound.com/static-data/assets/6/ca82c87a9cdd8bd525930a43ed1d42f78c621a22_m.jpg)')
+  a.box(class=type.replace(' ', '-'), href='./player.html', 
+        style='background-image:url(http://www.designboom.com/weblog/images/images_2/jayme/setagaya/set06.jpg)')
     span.type= type
     .in
       header.heading
@@ -10,8 +10,9 @@ mixin box(type, title, author, contentinfo, score)
         p
           | Latinadicunt contemnere. in quibus hoc primum est in quo 
           | admirer, cur in idque libenter crebis gravissimis rebus…
+        i.icon-play
         p.contentinfo
-          | 93 min - Societe - Culture - 12 437 vues
+          | 93 min - Societe - Culture - 12437 vues
     .score
       - var scoreitems = [];
       - for (var i = 0; i < score; i++) { scoreitems.push(i); }
@@ -19,8 +20,8 @@ mixin box(type, title, author, contentinfo, score)
         i.icon-spice
 
 mixin boxsmall(type, title, score)
-  a.box.box-small(class=type.replace(' ', '-'), href='#',
-        style='background-image:url(http://img.ffffound.com/static-data/assets/6/ca82c87a9cdd8bd525930a43ed1d42f78c621a22_m.jpg)')
+  a.box.box-small(class=type.replace(' ', '-'), href='./player.html',
+        style='background-image:url(http://www.designboom.com/weblog/images/images_2/jayme/setagaya/set06.jpg)')
     .in
       span.type= type
       header.heading

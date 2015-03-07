@@ -71,6 +71,10 @@
       &:hover, &:focus
         border-color _green
 
+    .my-spicee
+      &:hover, &:focus
+        border-color _blue
+
   .search
     a
       color #666
@@ -79,12 +83,23 @@
       margin 0
 
   &.prehome
+    height 160px
+    line-height 160px
     .logo
+      width 260px
       margin _gutter
       padding 0
 
 
-@media media-mobile
+@media only screen and (min-width:700px) and (max-width:1024px)
+
+  #header
+    .logo
+      padding-right 25px
+      width 100px
+
+
+@media only screen and (max-width:700px)
 
   #header
     overflow hidden
@@ -102,7 +117,9 @@
     nav
       display none
 
+
 @media media-desktop
+
   #header
     nav a
       font-size 20px

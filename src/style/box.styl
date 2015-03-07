@@ -13,9 +13,9 @@
 
   .in
     position absolute
-    left 0
-    right -1px
+    right 0
     bottom -80px
+    left 0
     overflow hidden
     padding _gutter _gutter 0
     height 250px
@@ -61,11 +61,17 @@
 
   .contentinfo
     position absolute
-    bottom 5px
+    bottom 0
     left 0
     right 0
+    padding 5px 10px
     margin 0
     font-style italic
+    line-height 1.2
+    color _pink
+
+  .icon-play
+    font-size 28px
     color _pink
 
   .score
@@ -76,41 +82,54 @@
     font-size 20px
     transition all .3s ease
     color _pink
+
     i
       margin-right 5px
 
   &.lifestyle 
+
     .heading:before
       background _green
+
     .type
       background-color _green
       &:after
         border-top-color _green
         border-left-color _green
+
+    .icon-play
     .contentinfo
     .score
       color _green
 
   &.investigation 
+
     .heading:before
       background _yellow
+
     .type
       background-color _yellow
       &:after
         border-top-color _yellow
         border-left-color _yellow
+
+    .icon-play
     .contentinfo
     .score
       color _yellow
 
   &:hover
+
     .in
       bottom 0
+
     .heading:before
       margin-left -20px
       width 40px
+
     .content
       opacity 1
+
     .score
       bottom -30px
       opacity 0
@@ -120,10 +139,12 @@
   .in
     position static
     bottom auto
-    height 180px
-    display table-cell
-    vertical-align middle
+    display flex
+    flex-direction column
+    justify-content center
     padding 0
+    height 180px
+    width 100%
   .heading
     margin 0
     padding 0 10px
@@ -133,3 +154,16 @@
     .score
       bottom 0
       opacity 1
+
+
+@media only screen and (min-width:768px) and (max-width: 850px)
+
+  .span-4
+    .box
+      .content
+        p:first-child
+          display none
+      .icon-play
+        display inline-block
+        margin-top _gutter
+        font-size 36px
