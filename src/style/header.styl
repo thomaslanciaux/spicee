@@ -16,7 +16,7 @@
     line-height 1
     fill _pink
 
-  #nav-toggle
+  .nav-toggle
     float right
     font-size 30px
     line-height 1
@@ -35,7 +35,7 @@
     a
       display block
       padding 0 15px
-      line-height 90px
+      line-height 85px
       font-style italic
       font-weight 600
       text-decoration none
@@ -100,7 +100,6 @@
 @media only screen and (max-width:700px)
 
   #header
-    overflow hidden
     box-sizing border-box
     display flex
     flex-orientation column
@@ -119,12 +118,87 @@
       height auto
 
     nav
-      display none
+      position fixed
+      top 0
+      bottom 0
+      right -20rem
+      z-index 99
+      box-sizing border-box
+      padding-top 50px
+      width 20rem
+      border-left 1px solid _body
+      transition right .2s ease-in-out
+
+      li
+        float none
+        border-top 1px solid _darkgrey
+
+      a
+      .search a
+        box-sizing border-box
+        padding 25px 15px 25px 25px
+        line-height inherit
+        color _white
+        border-bottom 0
+        border-right 10px solid transparent
+        &:focus, &:hover
+          border-left-color _white
+
+      .story
+        border-top 0
+
+      .my-spicee:before
+        display none
+
+      .search a
+        font-style normal
+        text-transform none
+        font-weight 400
+
+      .nav-toggle-container
+        position absolute
+        top 0
+        left 0
+        right 0
+        box-sizing border-box
+        padding 10px 25px
+        height 50px
+        text-align right
+        background _body
+
+      ul
+        position absolute
+        top 50px
+        bottom 0
+        left 0
+        width 100%
+        overflow hidden
+        overflow-y scroll
+        -webkit-overflow-scrolling touch
+        background _content
+
+      .nav-toggle
+        display inline-block
+        float none
+        padding 0
+        background none
+        line-height 1
+        border 0
+        &:hover, &:focus
+          border-color transparent
+
+  .nav-toggled 
+    overflow hidden
+    #header nav
+      right 0
 
 
 @media only screen and (min-width:699px)
 
-  #nav-toggle
+  .nav-toggle-container
+  .nav-toggle
+  .nav-btn
+  #header nav .search .label
     display none
 
 

@@ -6,10 +6,13 @@
     a.logo.animate-logolava(href='./home.html')
       include ../../svg/logo-fulltext.svg
 
-    a#nav-toggle(href='#navigation', title='Ouvrir la navigation')
+    a.nav-toggle(href='#navigation', title='Ouvrir la navigation')
       i.icon-menu
 
     nav#navigation
+      .nav-toggle-container
+        a.nav-toggle(href='#nav', title='Fermer la navigation')
+          i.icon-close
       ul
         each item in navItems
           li
@@ -17,4 +20,5 @@
               class=item.replace(' ', '-'))= item
         li.search
           a(href='#')
-            span.icon-search
+            span.icon-search 
+            span.label Rechercher
