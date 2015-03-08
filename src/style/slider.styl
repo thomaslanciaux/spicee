@@ -26,22 +26,35 @@
     text-align center
     color _white
     background rgba(black, .4)
+    transition all .3s ease-in-out
     cursor pointer
     i
       font-size 40px
       line-height 140px
+    &:hover, &:focus
+      background rgba(black, .5)
 
   .button-previous
     left 0
     border-radius 0 10px 10px 0
+    &:active
+      left -10px
 
   .button-next
     right 0
     border-radius 10px 0 0 10px
+    &:active
+      right -10px
 
   .swiper-button-disabled
     color _grey
     cursor default
+    &:hover, &:focus
+      background rgba(black, .4)
+    &.button-previous:active
+      left 0
+    &.button-next:active
+      right 0
 
   .swiper-pagination
     height 28px
