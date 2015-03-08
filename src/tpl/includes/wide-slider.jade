@@ -1,0 +1,24 @@
+#slider.slider.wide-slider.swiper-container.b-black
+
+  .swiper-wrapper
+    each slide in ['http://imageserver.moviepilot.com/-fb496a89-a002-4e06-a8e3-14aac37501e5.jpeg?width=1920&height=1080', 'http://animalnewyork.com/wp-content/uploads/bill-murrary-art-show.jpg', 'http://i.huffpost.com/gen/1365387/thumbs/o-BILL-MURRAY-CADDYSHACK-facebook.jpg']
+      .slide.swiper-slide
+        .background(style='background-image:url(' + slide + ')')
+        .viewport.t-pad.b-pad.txt-center.f-white
+          .heading.b-space.investigation
+            p
+              i.icon-spicee-logo(style='font-size:60px')
+            strong TEMPORE QUO PRIMIS AUSPICIIS
+            h1 In mudanum fulgorem
+          p.heading-content
+            | Lis igitur est difficilius satis facere, qui se Latinadicunt 
+            | contemnere. in quibus hoc primum est in quo admirer, cur in 
+            | gravissimis rebus non delectet eos sermo patrius
+
+  .swiper-pagination
+
+  a.button.button-previous(title='Precedent')
+    i.icon-chevron-left
+
+  a.button.button-next(title='Suivant')
+    i.icon-chevron-right

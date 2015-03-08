@@ -5,13 +5,39 @@ h1, h2, h3, h4, h5, h6
   position relative
   margin-bottom 25px
   padding-bottom 20px
+
+  h1
+    margin 0
+    line-height 1.1
+
   &:before
     content ''
     position absolute
     bottom -5px
     left 50%
-    margin-left -40px
-    width 80px
+    margin-left -60px
+    width 120px
     height 5px
     font-size 0
     background _white
+
+  &.story:before
+    background _pink
+
+  &.investigation:before
+    background _yellow
+
+  &.lifestyle:before
+    background _green
+
+.heading-content
+  display inline-block
+  margin-top 0
+  max-width 450px
+  font-size 16px
+
+
+@media media-desktop
+
+  .heading h1
+    font-size 50px
