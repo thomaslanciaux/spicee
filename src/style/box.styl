@@ -27,7 +27,7 @@
     transition opacity .3s ease
 
   .heading
-    h1
+    .title
       margin 0 0 10px
       font-size 20px
       line-height 1
@@ -158,10 +158,14 @@
       opacity 1
 
 
-@media only screen and (min-width:768px) and (max-width: 850px)
+@media only screen and (min-width:768px) and (max-width: 890px)
 
   .span-4
     .box
+      .title
+        overflow hidden
+        white-space nowrap
+        text-overflow ellipsis
       .content
         p:first-child
           display none
