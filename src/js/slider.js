@@ -1,11 +1,8 @@
 var domutils = require('./domutils');
 var swiper = require('./swiper');
 
-module.exports = function(id) {
+module.exports = function(id, params) {
   var sliderEl  = domutils.qid(id);
-  var slider    = new Swiper(sliderEl, {
-    pagination: '.swiper-pagination',
-    nextButton: '.button-next',
-    prevButton: '.button-previous'
-  });
+  var slider    = new Swiper(sliderEl, params);
+  return slider;
 };

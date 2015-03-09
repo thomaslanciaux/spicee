@@ -1,5 +1,9 @@
 .slider
 
+  .slide
+    position relative
+    box-sizing border-box
+
   .background
     position absolute
     top 0
@@ -72,6 +76,26 @@
     background _white
     border-color _white
 
+#prehome-slider
+  .background
+    opacity .8
+
+  .swiper-slide
+    overflow hidden
+    opacity .4
+    transform translate3d(0, 0, 0)
+    transition opacity .3s ease-in-out
+    .in
+      display table
+
+  .content
+    position relative
+    display table-cell
+    vertical-align middle
+    text-align center
+
+  .swiper-slide-active
+    opacity 1
 
 @media media-mobile
 

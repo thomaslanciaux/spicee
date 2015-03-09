@@ -1,0 +1,18 @@
+#prehome-slider.slider.swiper-container.b-black
+
+  .swiper-wrapper
+    each slide in ['http://imageserver.moviepilot.com/-fb496a89-a002-4e06-a8e3-14aac37501e5.jpeg?width=1920&height=1080', 'http://animalnewyork.com/wp-content/uploads/bill-murrary-art-show.jpg', 'http://i.huffpost.com/gen/1365387/thumbs/o-BILL-MURRAY-CADDYSHACK-facebook.jpg']
+      .slide.swiper-slide
+        .widescreen
+          .in
+            .background(style='background-image:url(' + slide + ')')
+            .content
+              a.btn.btn-big(href='#') Decouvrir Spicee
+
+  a.button.button-previous(title='Precedent')
+    i.icon-chevron-left
+
+  a.button.button-next(title='Suivant')
+    i.icon-chevron-right
+
+  .swiper-pagination

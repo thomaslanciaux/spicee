@@ -219,9 +219,25 @@ module.exports = {
 };
 
 },{}],2:[function(require,module,exports){
+var slider = require('./slider.js');
 var navToggle = require('./nav-toggle.js')('nav-toggle');
-var slider = require('./slider.js')('slider');
 var score = require('./score.js')('scoring');
+
+slider('slider', {
+    pagination : '.swiper-pagination',
+    nextButton : '.button-next',
+    prevButton : '.button-previous',
+});
+
+var prehomeSlider = slider('prehome-slider', {
+    pagination      : '.swiper-pagination',
+    nextButton      : '.button-next',
+    prevButton      : '.button-previous',
+    centeredSlides  : true,
+    slidesPerView   : (window.innerWidth > 600)? 1.3 : 1,
+    initialSlide    : 1,
+    loop            : true
+});
 
 },{"./nav-toggle.js":3,"./score.js":4,"./slider.js":5}],3:[function(require,module,exports){
 var domutils = require('./domutils');
@@ -288,13 +304,10 @@ module.exports = function(cls) {
 var domutils = require('./domutils');
 var swiper = require('./swiper');
 
-module.exports = function(id) {
+module.exports = function(id, params) {
   var sliderEl  = domutils.qid(id);
-  var slider    = new Swiper(sliderEl, {
-    pagination: '.swiper-pagination',
-    nextButton: '.button-next',
-    prevButton: '.button-previous'
-  });
+  var slider    = new Swiper(sliderEl, params);
+  return slider;
 };
 
 },{"./domutils":1,"./swiper":6}],6:[function(require,module,exports){
