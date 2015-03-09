@@ -3,13 +3,17 @@
   font-style italic
   text-transform uppercase
   font-weight 600
-  color _pink
+  a, i, span
+    display inline-block
+    vertical-align baseline
+    color inherit
+  i
+    font-size 14px
+    font-weight 600
+    margin 0 2px
   a
-    display inline-block
-    vertical-align middle
-    color _pink
-  a:after
-    content '>'
-    display inline-block
-    vertical-align middle
-    margin 0 5px 0 0
+    transition color .2s ease-in-out
+    &:hover, &:focus
+      color _white
+    &:active
+      color inherit !important
