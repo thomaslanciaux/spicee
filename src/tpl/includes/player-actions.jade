@@ -1,0 +1,19 @@
+.actions.b-space
+  span.f-lightgrey Partager : 
+  span.share.l-space.r-space 
+    each icon in ['facebook', 'twitter', 'google-plus', 'mail']
+      a(class='icon-' + icon, href='#') 
+  span.l-pad.l-border
+    span.f-lightgrey Evaluer : 
+    form.scoring.l-space.f-pink
+      fieldset.score-3
+        label(for='score-0', title='Noter 0 sur 5')
+          input#score-0(type='radio', name='score', value='0')
+          i.icon-spice-empty
+        each input in [1, 2, 3, 4, 5]
+          label(for='score-' + input, title='Noter ' + input + ' sur 5')
+            input(type='radio', name='score', id='score-' + input, 
+                  value=input)
+            i.icon-spice
+        p.no-js
+          button.no-js.btn.btn-small(type='submit') Enregistrer le score

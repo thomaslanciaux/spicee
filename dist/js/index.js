@@ -219,33 +219,85 @@ module.exports = {
 };
 
 },{}],2:[function(require,module,exports){
-var domutils = require('./domutils');
-var swiper = require('./swiper');
+var navToggle = require('./nav-toggle.js')('nav-toggle');
+var slider = require('./slider.js')('slider');
+var score = require('./score.js')('scoring');
 
-// Nav toggle init
-var navToggleEls    = domutils.qclass('nav-toggle');
-var bodyEl          = domutils.q('body');
-var toggleElsCount  = navToggleEls.length;
-while (toggleElsCount--) {
-  domutils.on(navToggleEls[toggleElsCount], 'click', function(e) {
-    e.preventDefault();
-    if (domutils.hasClass(bodyEl, 'nav-toggled')) {
-      domutils.removeClass(bodyEl, 'nav-toggled')
-    } else {
-      domutils.addClass(bodyEl, 'nav-toggled')
-    }
+},{"./nav-toggle.js":3,"./score.js":4,"./slider.js":5}],3:[function(require,module,exports){
+var domutils = require('./domutils');
+
+module.exports = function(cls) {
+  var navToggleEls    = domutils.qclass(cls);
+  var bodyEl          = domutils.q('body');
+  var toggleElsCount  = navToggleEls.length;
+
+  while (toggleElsCount--) {
+    domutils.on(navToggleEls[toggleElsCount], 'click', function(e) {
+      e.preventDefault();
+      if (domutils.hasClass(bodyEl, 'nav-toggled')) {
+        domutils.removeClass(bodyEl, 'nav-toggled')
+      } else {
+        domutils.addClass(bodyEl, 'nav-toggled')
+      }
+    });
+  }
+};
+
+},{"./domutils":1}],4:[function(require,module,exports){
+var domutils = require('./domutils');
+
+function setScoreClass(scoreEl, cls) {
+  domutils.addClass(scoreEl, cls);
+}
+
+function initScore(score) {
+  var scoreEl = domutils.q('fieldset', score);
+  var origin  = scoreEl.className;
+  var labels  = domutils.qall('label', score);
+  var inputs  = domutils.qall('input[type=radio]', score);
+  var i       = labels.length;
+
+  console.log(inputs);
+
+  while (i--) {
+    domutils.on(labels[i], 'mouseenter', function() {
+      scoreEl.className = domutils.attr(this, 'for');
+    });
+
+    domutils.on(inputs[i], 'click', function() {
+      var cls = this.id;
+      scoreEl.className = cls;
+      origin = cls;
+    });
+  }
+
+  domutils.on(scoreEl, 'mouseleave', function() {
+    scoreEl.className = origin;
   });
 }
 
-// Slider init
-var sliderEl  = domutils.qid('slider');
-var slider    = new Swiper(sliderEl, {
-  pagination: '.swiper-pagination',
-  nextButton: '.button-next',
-  prevButton: '.button-previous'
-});
+module.exports = function(cls) {
+  var scores = domutils.qclass(cls);
+  var i = scores.length;
+  while (i--) {
+    initScore(scores[i]);
+  }
+};
 
-},{"./domutils":1,"./swiper":3}],3:[function(require,module,exports){
+},{"./domutils":1}],5:[function(require,module,exports){
+var domutils = require('./domutils');
+var swiper = require('./swiper');
+
+module.exports = function(id) {
+  var sliderEl  = domutils.qid(id);
+  var slider    = new Swiper(sliderEl, {
+    pagination: '.swiper-pagination',
+    nextButton: '.button-next',
+    prevButton: '.button-previous'
+  });
+};
+
+},{"./domutils":1,"./swiper":6}],6:[function(require,module,exports){
 /**
  * Swiper 3.0.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions

@@ -34,37 +34,8 @@ block content
           | agenda praedoctis, et adsistebant hinc inde notarii…
         a.btn.btn-small.btn-pink(href='#description') Plus
 
-      .actions.b-space
-        span.f-lightgrey Partager : 
-        span.share.l-space.r-space 
-          each icon in ['facebook', 'twitter', 'google-plus', 'mail']
-            a(class='icon-' + icon, href='#') 
-        span.l-pad.l-border
-          span.f-lightgrey Evaluer : 
-          form.scoring.l-space
-            fieldset
-              label(for='score-0', title='Noter 0 sur 5')
-                input#score-0(type='radio', name='score', value='0')
-                i.icon-spice-empty
-              each input in [1, 2, 3, 4, 5]
-                label(for='score-' + input, title='Noter ' + input + ' sur 5')
-                  input(type='radio', name='score', id='score-' + input, 
-                        value=input)
-                  i.icon-spice
-              p.no-js
-                button.no-js.btn.btn-small(type='submit') Enregistrer le score
-
-      .t-border.t-pad.comments
-        form.b-space.comment-form
-          fieldset
-            legend.f-lightgrey Ajouter un commentaire :
-            p.content
-              label.avatar(for='comment')
-                img(src='https://1.gravatar.com/avatar/767fc9c115a1b989744c755db47feb60?s=42&r=pg&d=mm', alt='User name')
-              textarea#comment.wide(row='1', placeholder='Partager votre avis', resizable='false')
-            p.no-js.txt-right
-              button.btn.btn-small(type='submit') Ajouter le commentaire
-        a.lk.f-pink(href='#') Afficher les commentaires
+      include ./includes/player-actions
+      include ./includes/player-comments
 
   .i-space.logo-pattern.t-border
     .viewport
