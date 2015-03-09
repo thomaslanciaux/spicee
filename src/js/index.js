@@ -14,6 +14,5 @@ var prehomeSlider = slider('prehome-slider', {
     prevButton      : '.button-previous',
     centeredSlides  : true,
     slidesPerView   : (window.innerWidth > 599)? 1.2 : 1,
-    initialSlide    : 1,
     loop            : true
 });
