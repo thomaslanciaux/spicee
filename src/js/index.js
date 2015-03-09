@@ -13,7 +13,7 @@ var prehomeSlider = slider('prehome-slider', {
     nextButton      : '.button-next',
     prevButton      : '.button-previous',
     centeredSlides  : true,
-    slidesPerView   : (window.innerWidth > 600)? 1.3 : 1,
+    slidesPerView   : (window.innerWidth > 599)? 1.2 : 1,
     initialSlide    : 1,
     loop            : true
 });
