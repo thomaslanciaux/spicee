@@ -6,6 +6,7 @@ slider('slider', {
     pagination : '.swiper-pagination',
     nextButton : '.button-next',
     prevButton : '.button-previous',
+    loop       : true
 });
 
 var prehomeSlider = slider('prehome-slider', {
