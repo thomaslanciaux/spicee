@@ -81,13 +81,29 @@
       margin 0
 
   &.prehome
+    padding 10px 0
     height 160px
-    line-height 160px
-    padding 0
+    width 100%
+    font-size 1rem
+    text-align center
+
+    .viewport
+      position relative
+
+    .login
+      position absolute
+      top 0
+      right 25px
+      color _grey
+      &:hover, &:focus
+        span
+          text-decoration underline
+
     .logo
+      display inline-block
       width 260px
       max-width 50%
-      margin _gutter
+      margin 50px
       padding 0
 
 
