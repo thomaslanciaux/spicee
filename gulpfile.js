@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var jade = require('gulp-jade');
 var browserify = require('gulp-browserify');
+var uglifyjs = require('gulp-uglifyjs');
 
 function cssBundle(compress) {
   return gulp.src('./src/style/index.styl')
@@ -20,6 +21,16 @@ gulp.task('js', function() {
       debug: false,
       insertGlobals: false
     }))
+    .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('jsmin', function() {
+  gulp.src('./src/js/index.js')
+    .pipe(browserify({
+      debug: false,
+      insertGlobals: false
+    }))
+    .pipe(uglifyjs())
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -50,4 +61,4 @@ gulp.task('watch-css', function() {
 
 gulp.task('watch', ['watch-js', 'watch-html', 'watch-css']);
 
-gulp.task('default', ['html', 'cssmin', 'js']);
+gulp.task('default', ['html', 'cssmin', 'jsmin']);
