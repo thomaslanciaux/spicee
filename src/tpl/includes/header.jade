@@ -13,12 +13,20 @@
       .nav-toggle-container
         a.nav-toggle(href='#nav', title='Fermer la navigation')
           i.icon-close
-      ul
-        each item in navItems
-          li
-            a(href='./category.html',
-              class=item.replace(' ', '-'))= item
-        li.search
-          a(href='#')
-            span.icon-search 
-            span.label Rechercher
+
+      .in
+        ul.nav
+          each item in navItems
+            li
+              a(href='./category.html',
+                class=item.replace(' ', '-'))= item
+          li.search
+            a(href='#')
+              span.icon-search 
+              span.label Rechercher
+
+        ul.share
+          each media in ['facebook', 'twitter', 'google-plus']
+            li
+              a(href='#')
+                i(class='icon-' + media)

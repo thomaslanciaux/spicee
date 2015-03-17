@@ -1,17 +1,20 @@
 #header
   font-size 0
 
-  .logo
+  .viewport
+    position relative
+    padding-left 240px
+
   nav
-    display inline-block
-    vertical-align middle
     font-size 18px
 
   .logo
-    margin 0
+    position absolute
+    left 25px
+    top 50%
+    margin-top -20px
     width 155px
-    height auto
-    padding-right 60px
+    height 39px
     font-size 0
     line-height 1
     fill _pink
@@ -23,62 +26,84 @@
 
   nav
     text-transform uppercase
+
     ul
       overflow hidden
       padding 0
       margin 0
       list-style none
+
     li
       position relative
       float left
       margin 0
-    a
-      display block
-      padding 0 15px
-      line-height 85px
-      font-style italic
-      font-weight 600
-      text-decoration none
-      color _white
-      border-bottom 5px transparent solid
-      transition border .2s ease-in-out
-      &:hover
-      &:focus
-        border-color _white
+
+    .nav
+      a
+        box-sizing border-box
+        display block
+        padding 5px 15px 0
+        line-height 80px
+        font-style italic
+        font-weight 600
+        text-decoration none
+        color _white
+        border-bottom 5px transparent solid
+        transition border .2s ease-in-out
+        &:hover
+        &:focus
+          border-color _white
+
+      .story
+        &:hover, &:focus
+          border-color _pink
+
+      .investigation
+        &:hover, &:focus
+          border-color _yellow
+
+      .lifestyle
+        &:hover, &:focus
+          border-color _green
+
+      .my-spicee
+        &:hover, &:focus
+          border-color _blue
+
+      .search 
+        a 
+          color #666
+          padding 0
+          border 0
+          margin 33px 0 0
+          line-height 1
 
     .my-spicee:before
-        overflow hidden
-        position absolute
-        top 50%
-        left 0
-        margin-top -16px
-        width 0
-        height 25px
-        border-left 1px dotted #424242
-        content ''
+      overflow hidden
+      position absolute
+      top 50%
+      left 0
+      margin-top -16px
+      width 0
+      height 25px
+      border-left 1px dotted #424242
+      content ''
 
-    .story
-      &:hover, &:focus
-        border-color _pink
-
-    .investigation
-      &:hover, &:focus
-        border-color _yellow
-
-    .lifestyle
-      &:hover, &:focus
-        border-color _green
-
-    .my-spicee
-      &:hover, &:focus
-        border-color _blue
-
-  .search
+  .share
+    position absolute
+    right 25px
+    top 50%
+    margin-top -12px
+    li
+      margin-left 5px
     a
-      color #666
-      padding 0
-      border 0
-      margin 0
+      color _grey
+      &:hover, &:focus
+        color _white
+      &:active
+        color _grey
+    i
+      font-size 20px
 
   &.prehome
     padding 10px 0
@@ -102,20 +127,24 @@
     .logo
       display inline-block
       width 260px
+      height auto
       max-width 50%
       margin 50px
       padding 0
 
 
-@media only screen and (min-width:700px) and (max-width:1024px)
+@media only screen and (min-width:735px) and (max-width:1024px)
 
   #header
+    .viewport
+      padding-left 150px
     .logo
-      padding-right 25px
       width 100px
+    .share
+      margin-top -19px
 
 
-@media only screen and (max-width:700px)
+@media only screen and (max-width:734px)
 
   #header
     box-sizing border-box
@@ -131,7 +160,10 @@
       padding 0 15px
 
     .logo
-      float none
+      position static
+      top auto
+      left auto
+      margin 0
       display inline-block
       width 100px
       height auto
@@ -151,27 +183,29 @@
         float none
         border-top 1px solid _darkgrey
 
-      a
-      .search a
-        box-sizing border-box
-        padding 25px 15px 25px 25px
-        line-height inherit
-        color _white
-        border-bottom 0
-        border-right 10px solid transparent
-        &:focus, &:hover
-          border-left-color _white
+      .nav
+        a
+        .search a
+          box-sizing border-box
+          padding 25px 15px 25px 25px
+          line-height inherit
+          color _white
+          border-bottom 0
+          border-right 10px solid transparent
+          &:focus, &:hover
+            border-left-color _white
 
-      .story
-        border-top 0
+        .story
+          border-top 0
 
-      .my-spicee:before
-        display none
+        .my-spicee:before
+          display none
 
-      .search a
-        font-style normal
-        text-transform none
-        font-weight 400
+        .search a
+          margin 0
+          font-style normal
+          text-transform none
+          font-weight 400
 
       .nav-toggle-container
         position absolute
@@ -182,7 +216,8 @@
         padding 10px 15px
         height 50px
         text-align right
-      ul
+
+      .in
         position absolute
         top 50px
         bottom 0
@@ -204,6 +239,20 @@
         &:hover, &:focus
           border-color transparent
 
+      .share
+        list-style none
+        position static
+        top auto
+        right auto
+        display block
+        margin 0
+        padding 20px
+        border-top 1px solid _darkgrey
+        li
+          float none
+          display inline-block
+          border-top 0
+
   .nav-toggled 
     overflow hidden
     #header 
@@ -218,7 +267,7 @@
           display inline-block
 
 
-@media only screen and (min-width:699px)
+@media only screen and (min-width:735px)
 
   .nav-toggle-container
   .nav-toggle
