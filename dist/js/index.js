@@ -224,21 +224,21 @@ var navToggle = require('./nav-toggle.js')('nav-toggle');
 var score = require('./score.js')('scoring');
 
 slider('slider', {
-    pagination : '.swiper-pagination',
-    nextButton : '.button-next',
-    prevButton : '.button-previous',
-    paginationClickable: true,
-    loop       : true
+    pagination          : '.swiper-pagination',
+    nextButton          : '.button-next',
+    prevButton          : '.button-previous',
+    paginationClickable : true,
+    loop                : true
 });
 
 var prehomeSlider = slider('prehome-slider', {
-    pagination      : '.swiper-pagination',
-    nextButton      : '.button-next',
-    prevButton      : '.button-previous',
-    paginationClickable: true,
-    centeredSlides  : true,
-    slidesPerView   : (window.innerWidth > 599)? 1.2 : 1,
-    loop            : true
+    pagination          : '.swiper-pagination',
+    nextButton          : '.button-next',
+    prevButton          : '.button-previous',
+    paginationClickable : true,
+    centeredSlides      : true,
+    slidesPerView       : (window.innerWidth > 599)? 1.2 : 1,
+    loop                : true
 });
 
 },{"./nav-toggle.js":3,"./score.js":4,"./slider.js":5}],3:[function(require,module,exports){
@@ -268,14 +268,16 @@ function setScoreClass(scoreEl, cls) {
   domutils.addClass(scoreEl, cls);
 }
 
+function postScore(url, cb) {
+  //
+}
+
 function initScore(score) {
   var scoreEl = domutils.q('fieldset', score);
   var origin  = scoreEl.className;
   var labels  = domutils.qall('label', score);
   var inputs  = domutils.qall('input[type=radio]', score);
   var i       = labels.length;
-
-  console.log(inputs);
 
   while (i--) {
     domutils.on(labels[i], 'mouseenter', function() {
