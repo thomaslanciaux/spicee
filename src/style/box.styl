@@ -1,3 +1,28 @@
+.type
+  position absolute
+  top 0
+  left 0
+  padding 0 5px 0 10px
+  height 20px
+  font-size 14px
+  font-style italic
+  font-weight 600
+  text-transform uppercase
+  background-color _pink
+  color _body
+  &:after
+    position absolute
+    right -10px
+    top 0
+    width 0
+    height 0
+    content ''
+    border 10px solid _pink
+    border-bottom-color transparent
+    border-right-color transparent
+    border-right-width 5px
+    border-left-width 5px
+
 .box
   position relative
   overflow hidden
@@ -19,7 +44,7 @@
     overflow hidden
     padding _gutter _gutter 0
     height 250px
-    background rgba(black, .6)
+    background rgba(black, .5)
     transition bottom .3s ease
 
   .content
@@ -36,30 +61,6 @@
       width 80px
       transition all .3s ease
       background _pink
-
-  .type
-    position absolute
-    top 0
-    left 0
-    padding 0 5px 0 10px
-    height 20px
-    font-style italic
-    font-weight 600
-    text-transform uppercase
-    background-color _pink
-    color _body
-    &:after
-      position absolute
-      right -10px
-      top 0
-      width 0
-      height 0
-      content ''
-      border 10px solid _pink
-      border-bottom-color transparent
-      border-right-color transparent
-      border-right-width 5px
-      border-left-width 5px
 
   .contentinfo
     position absolute

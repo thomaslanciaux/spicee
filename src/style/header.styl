@@ -145,7 +145,6 @@
       box-sizing border-box
       padding-top 50px
       width 20rem
-      border-left 1px solid _body
       transition right .2s ease-in-out
 
       li
@@ -183,8 +182,6 @@
         padding 10px 15px
         height 50px
         text-align right
-        background _body
-
       ul
         position absolute
         top 50px
@@ -195,6 +192,7 @@
         overflow-y scroll
         -webkit-overflow-scrolling touch
         background _content
+        border-left 1px solid _body
 
       .nav-toggle
         display inline-block
@@ -208,8 +206,16 @@
 
   .nav-toggled 
     overflow hidden
-    #header nav
-      right 0
+    #header 
+      .nav-toggle
+        display none
+      .logo
+        position relative
+        z-index 999
+      nav
+        right 0
+        .nav-toggle
+          display inline-block
 
 
 @media only screen and (min-width:699px)
