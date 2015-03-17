@@ -6,6 +6,7 @@ slider('slider', {
     pagination : '.swiper-pagination',
     nextButton : '.button-next',
     prevButton : '.button-previous',
+    paginationClickable: true,
     loop       : true
 });
 
@@ -13,6 +14,7 @@ var prehomeSlider = slider('prehome-slider', {
     pagination      : '.swiper-pagination',
     nextButton      : '.button-next',
     prevButton      : '.button-previous',
+    paginationClickable: true,
     centeredSlides  : true,
     slidesPerView   : (window.innerWidth > 599)? 1.2 : 1,
     loop            : true
