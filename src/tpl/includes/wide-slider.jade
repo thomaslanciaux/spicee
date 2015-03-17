@@ -1,12 +1,17 @@
 #slider.slider.wide-slider.swiper-container.b-black
 
   .swiper-wrapper
-    each slide in ['http://imageserver.moviepilot.com/-fb496a89-a002-4e06-a8e3-14aac37501e5.jpeg?width=1920&height=1080', 'http://animalnewyork.com/wp-content/uploads/bill-murrary-art-show.jpg', 'http://i.huffpost.com/gen/1365387/thumbs/o-BILL-MURRAY-CADDYSHACK-facebook.jpg']
-      .slide.swiper-slide
+    each slide, i in ['http://imageserver.moviepilot.com/-fb496a89-a002-4e06-a8e3-14aac37501e5.jpeg?width=1920&height=1080', 'http://animalnewyork.com/wp-content/uploads/bill-murrary-art-show.jpg', 'http://i.huffpost.com/gen/1365387/thumbs/o-BILL-MURRAY-CADDYSHACK-facebook.jpg']
+      - cls = 'investigation';
+      if (i === 1)
+        - cls = 'story';
+      if (i === 2)
+        - cls = 'lifestyle';
+      .slide.swiper-slide(class=cls)
         .background(style='background-image:url(' + slide + ')')
         a.viewport.t-pad.b-pad.txt-center.f-white(href='./player.html')
           span.type A la une
-          .heading.b-space.investigation
+          .heading.b-space
             p
               i.icon-spicee-logo(style='font-size:60px')
             strong TEMPORE QUO PRIMIS AUSPICIIS
