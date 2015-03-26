@@ -19,6 +19,14 @@ The following technologies are used:
 $ npm install
 ```
 
+## Build the code
+
+The code has to be built every time you update src files
+
+```
+$ gulp
+```
+
 ## Font icons
 
 The font icons are used for most of the UX graphic. They are generated via [Icomoon App](http://icomoon.io/app/), which is an online tool to generate your own font-icon set and allows to import SVGs. 
