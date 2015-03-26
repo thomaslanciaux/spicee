@@ -1,11 +1,18 @@
 .actions.b-space
   span.f-lightgrey Partager : 
+
   span.share.l-space.r-space 
     each icon in ['facebook', 'twitter', 'google-plus', 'mail']
       a(class='icon-' + icon, href='#') 
+
   span.l-pad.l-border
     span.f-lightgrey Evaluer : 
-    form.scoring.l-space.f-pink
+    form(method='post', 
+         action='http://localhost:3000/score',
+         class='scoring l-space f-pink',
+         data-load-text='Enregistrement du score en cours…',
+         data-success-text='Le score a ete enregistre',
+         data-error-text='Une erreur est survenue lors de l\'enregistrement du score, veuillez reessayer')
       fieldset.score-3
         label(for='score-0', title='Noter 0 sur 5')
           input#score-0(type='radio', name='score', value='0')
