@@ -31,3 +31,11 @@ Follow these steps to add icon(s) to the font:
 - In the previously downloaded directory, copy `./style.css` into spicee project in `./src/style/icons.styl`
 - In the previously downloaded directory, copy all fonts from `./fonts/*` into spicee project in `./dist/css/fonts/`
 - Run `$ gulp`
+
+## Score demo
+
+To be able to test the score posting demo, you need to launch a simple server:
+
+```
+$ node server.js
+```
