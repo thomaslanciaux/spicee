@@ -89,16 +89,22 @@
       transform translate3d(0, 0, 0)
       transition opacity .3s ease-in-out
       opacity .4
-    .in
-      display table
     .widescreen
       max-height 400px
 
   .content
-    position relative
-    display table-cell
-    vertical-align middle
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    display flex
+    flex-direction column
+    justify-content center
     text-align center
+    .btn-big
+        margin 0 auto
+        width 250px
 
   .swiper-slide-active
     .background
